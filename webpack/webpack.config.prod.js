@@ -28,43 +28,6 @@ const prodConfig = {
           },
         ],
       },
-      {
-        test: /\.module\.s(a|c)ss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              modules: {
-                auto: true,
-                localIdentName: '[name]__[local]--[hash:base64:5]',
-                exportLocalsConvention: 'camelCase',
-              },
-              sourceMap: false,
-            },
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: false,
-            },
-          },
-        ],
-      },
-      {
-        test: /\.s(a|c)ss$/,
-        exclude: /\.module.(s(a|c)ss)$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: false,
-            },
-          },
-        ],
-      },
     ],
   },
   optimization: {

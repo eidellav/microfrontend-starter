@@ -42,43 +42,6 @@ const devConfig = {
           },
         ],
       },
-      {
-        test: /\.module\.s(a|c)ss$/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              modules: {
-                auto: true,
-                localIdentName: '[name]__[local]--[hash:base64:5]',
-                exportLocalsConvention: 'camelCase',
-              },
-              sourceMap: true,
-            },
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true,
-            },
-          },
-        ],
-      },
-      {
-        test: /\.s(a|c)ss$/,
-        exclude: /\.module.(s(a|c)ss)$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true,
-            },
-          },
-        ],
-      },
     ],
   },
   plugins: [

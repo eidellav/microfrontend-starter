@@ -1,0 +1,4 @@
+body {
+  /* TODO: fix light mode in `@linerab/linui-common` */
+  background-color: white !important;
+}

@@ -1,8 +1,14 @@
+import {
+  LinuiTheme,
+  ToggleButton,
+  ToggleButtonGroup,
+} from '@linearb/linui-common';
+
 function App() {
   return (
-    <div>
+    <LinuiTheme initialMode='light'>
       <h1>This is the App. yippee!</h1>
-    </div>
+    </LinuiTheme>
   );
 }
 
