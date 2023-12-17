@@ -1,9 +1,13 @@
 import { LinuiTheme } from '@linearb/linui-common';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { routes } from './routes';
+
+const router = createBrowserRouter(routes);
 
 function App() {
   return (
     <LinuiTheme initialMode='light'>
-      <h1>This is the App. yippee!</h1>
+      <RouterProvider router={router} />
     </LinuiTheme>
   );
 }
