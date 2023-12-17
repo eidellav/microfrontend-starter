@@ -128,3 +128,14 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+.npmrc
+
+# Locally linked libraries
+.yalc/
+yalc.lock
+
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
