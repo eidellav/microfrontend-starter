@@ -7,6 +7,8 @@
   "scripts": {
     "start": "webpack serve --config ./webpack/webpack.config.dev.js --no-stats --progress",
     "build": "webpack build --config ./webpack/webpack.config.prod.js --no-stats --progress",
+    "lint": "eslint ./src --ext ts,tsx,jsx,jsx",
+    "lint:fix": "npm run lint -- --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "lev.eidelman@linearb.io",
@@ -14,13 +16,11 @@
   "devDependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
     "@swc/core": "^1.3.100",
-    "@typescript-eslint/eslint-plugin": "^6.14.0",
-    "@typescript-eslint/parser": "^6.14.0",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.8.1",
     "dotenv-webpack": "^8.0.1",
     "eslint": "^8.56.0",
-    "eslint-plugin-react": "^7.33.2",
+    "eslint-config-alloy": "^5.1.2",
     "html-webpack-plugin": "^5.5.4",
     "mini-css-extract-plugin": "^2.7.6",
     "node-polyfill-webpack-plugin": "^3.0.0",
