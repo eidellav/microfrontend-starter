@@ -6,6 +6,7 @@
   "main": "src/index.ts",
   "scripts": {
     "start": "webpack serve --config ./webpack/webpack.config.dev.js --no-stats --progress",
+    "build": "webpack build --config ./webpack/webpack.config.prod.js --no-stats --progress",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "lev.eidelman@linearb.io",
@@ -13,12 +14,18 @@
   "devDependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
     "@swc/core": "^1.3.100",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
     "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.8.1",
     "dotenv-webpack": "^8.0.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
     "html-webpack-plugin": "^5.5.4",
     "mini-css-extract-plugin": "^2.7.6",
     "node-polyfill-webpack-plugin": "^3.0.0",
     "prettier": "^3.1.1",
+    "style-loader": "^3.3.3",
     "swc-loader": "^0.2.3",
     "tsconfig-paths-webpack-plugin": "^4.1.0",
     "typescript": "^5.3.3",
@@ -28,6 +35,7 @@
     "webpack-merge": "^5.10.0"
   },
   "dependencies": {
+    "@linearb/linui-common": "^2.8.0",
     "@types/react": "^17.0.73",
     "@types/react-dom": "^17.0.25",
     "react": "^17.0.2",
