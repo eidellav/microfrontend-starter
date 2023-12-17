@@ -4,7 +4,7 @@ module.exports = {
       version: 'detect',
     },
   },
-  extends: ['alloy', 'alloy/react', 'alloy/typescript'],
+  extends: ['alloy', 'alloy/react', 'alloy/typescript', 'prettier'],
   env: {
     browser: true,
   },
