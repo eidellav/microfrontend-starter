@@ -29,7 +29,6 @@ module.exports = {
         test: /\.svg$/,
         loader: 'svg-url-loader',
         options: {
-          limit: 10000,
           limit: false,
         },
       },
@@ -51,15 +50,23 @@ module.exports = {
       filename: 'styles.[contenthash].css',
     }),
     new ModuleFederationPlugin({
-      name: 'organic',
-      library: { type: 'var', name: 'organic' },
+      name: 'remote',
+      library: { type: 'var', name: 'remote' },
       filename: 'remoteEntry.js',
       exposes: {
         './App': './src/App.tsx',
       },
       shared: {
-        react: { singleton: true, requiredVersion: false, eager: true },
-        'react-dom': { singleton: true, requiredVersion: false, eager: true },
+        react: {
+          singleton: true,
+          requiredVersion: false,
+          eager: true,
+        },
+        'react-dom': {
+          singleton: true,
+          requiredVersion: false,
+          eager: true,
+        },
       },
     }),
     new HtmlWebpackPlugin({
